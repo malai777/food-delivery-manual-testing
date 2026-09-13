@@ -1,95 +1,268 @@
-# OmniPizza Manual Testing Project
+# Food Delivery Manual Testing Project
 
-## 📌 Project Overview
+A manual QA testing project for **OmniPizza**, a test-friendly food ordering web application.
 
-OmniPizza is a web-based food ordering application used as a testing sandbox.
-
-This project demonstrates my practical knowledge of Manual Software Testing by testing the application's authentication, pizza selection, shopping cart, checkout, payment and order confirmation workflows.
-
-The testing was performed manually with a focus on functional testing, negative testing, validation and end-to-end user flows.
+This project demonstrates practical manual testing skills including test planning, test case design, functional testing, negative testing, exploratory testing, checkout validation, test data management, requirements traceability, and defect reporting.
 
 ---
 
-## 🎯 Testing Objectives
+## Project Overview
 
-The main objectives of this project were to:
+**Application:** OmniPizza  
+**Testing Type:** Manual Testing  
+**Tester:** Malaika  
+**Project Status:** Completed
 
-- Verify user login functionality.
-- Verify invalid login scenarios.
-- Verify pizza selection and cart functionality.
-- Verify quantity management.
-- Verify checkout field validation.
-- Verify phone and ZIP code validation.
-- Verify the PayPal demo checkout flow.
-- Verify price, tax, delivery fee and tip calculations.
-- Verify successful order placement.
-- Verify cart behavior after completing an order.
+The objective of this project was to test the core food-ordering workflow from login through cart management and checkout.
 
 ---
 
-## 🧪 Testing Scope
+## Testing Objectives
 
-### Features Tested
+The main objectives were to verify:
+
+- User authentication
+- Login validation
+- Pizza selection and cart functionality
+- Pizza quantity management
+- Cart item removal
+- Checkout field validation
+- Phone number validation
+- ZIP code validation
+- Required field validation
+- Payment flow
+- Tip calculation
+- Checkout total calculation
+- Order confirmation
+- Cart behavior after successful order
+- Browser navigation behavior
+- Multiple browser tab behavior
+
+---
+
+## Scope of Testing
+
+### In Scope
 
 - Login
-- Invalid Login
-- Pizza Selection
-- Shopping Cart
-- Quantity Management
-- Remove Item
+- Authentication validation
+- Product selection
+- Cart functionality
+- Quantity management
 - Checkout
-- Phone Number Validation
-- ZIP Code Validation
-- PayPal Demo Payment
-- Price Calculation
-- Tip Calculation
-- Order Placement
-- Order Confirmation
-- Cart Clearing
+- Form validation
+- Payment flow
+- Tip calculation
+- Tax and delivery fee calculation
+- Order placement
+- Order confirmation
+- Exploratory testing
+- Browser navigation
+- Multiple browser tabs
+
+### Out of Scope
+
+- Performance/load testing
+- Security penetration testing
+- Database testing
+- API automation
+- Mobile application testing
+- Production payment processing
+- Real customer data
 
 ---
 
-## 🔍 Testing Types
+## Testing Types
+
+The following testing techniques were used:
 
 - Functional Testing
+- Positive Testing
 - Negative Testing
-- Boundary Testing
-- Validation Testing
+- Boundary/Validation Testing
+- UI Testing
 - End-to-End Testing
 - Exploratory Testing
+- Regression Checks
 
 ---
 
-## 💻 Test Environment
+## Test Environment
 
 | Item | Details |
 |---|---|
 | Application | OmniPizza |
-| Application Type | Web Application |
-| Testing Type | Manual Testing |
+| Testing Type | Manual |
 | Browser | Google Chrome |
-| Platform | Web |
-| Payment Method | PayPal Demo |
-| Test Data | Application-provided test data |
+| Platform | macOS |
+| Test Data | Dummy/Test Data |
+| Payment | Demo/Simulated Payment Flow |
+
+No real payment credentials or sensitive personal information were used.
 
 ---
 
-## 📊 Test Execution Summary
+# Test Execution Summary
+
+## Planned Test Cases
+
+**Total Test Cases:** 20  
+**Passed:** 20  
+**Failed:** 0  
+**Pass Rate:** 100%
+
+All planned test cases passed during execution.
+
+---
+
+## Exploratory Testing
+
+Additional exploratory testing was performed after completing the planned test cases.
+
+| Test | Area | Result |
+|---|---|---|
+| ET-001 | Refresh during checkout | PASS |
+| ET-002 | Browser Back navigation | PASS |
+| ET-003 | Multiple browser tabs | PASS |
+
+**Exploratory Tests:** 3  
+**Passed:** 3  
+**Failed:** 0
+
+### Exploratory Testing Areas
+
+- Browser refresh during checkout
+- Browser Back navigation
+- Cart persistence during navigation
+- Multiple browser tabs
+- Cart quantity synchronization
+
+No confirmed defects were identified during exploratory testing.
+
+---
+
+# Overall Test Result
 
 | Metric | Result |
 |---|---:|
-| Total Test Cases | 20 |
-| Passed | 20 |
-| Failed | 0 |
-| Blocked | 0 |
-| Pass Rate | 100% |
+| Planned Test Cases | 20 |
+| Planned Tests Passed | 20 |
+| Exploratory Tests | 3 |
+| Exploratory Tests Passed | 3 |
+| Total Tests Executed | 23 |
+| Total Passed | 23 |
+| Total Failed | 0 |
+| Confirmed Bugs | 0 |
+| Overall Pass Rate | 100% |
 
 ---
 
-## 📁 Project Structure
+# Test Documentation
+
+### Test Plan
+
+Contains:
+
+- Testing objectives
+- Scope
+- Testing types
+- Test environment
+- Entry criteria
+- Exit criteria
+- Test scenarios
+- Test execution summary
+
+[View Test Plan](Test-Plan/Test-Plan.md)
+
+---
+
+### Test Cases
+
+Contains 20 manually designed test cases covering:
+
+- Login
+- Cart functionality
+- Checkout
+- Validation
+- Payment
+- Calculations
+- Order confirmation
+
+[View Test Cases](Test-Cases/Test-Cases.md)
+
+---
+
+### Test Data
+
+Contains the dummy data used during testing, including:
+
+- Login credentials
+- Checkout data
+- Cart data
+- Negative test data
+- Payment test data
+
+[View Test Data](Test-Data/Test-Data.md)
+
+---
+
+### Requirements Traceability Matrix
+
+The RTM maps requirements to test cases and helps verify test coverage.
+
+**Requirements Covered:** 17  
+**Test Cases Mapped:** 20  
+**Coverage:** 100%
+
+[View RTM](Requirements-Traceability/RTM.md)
+
+---
+
+### Exploratory Testing
+
+Contains the exploratory testing performed after the planned test cases.
+
+Areas covered:
+
+- Checkout refresh
+- Browser Back navigation
+- Multiple browser tabs
+
+[View Exploratory Testing](Exploratory-Testing/Exploratory-Testing.md)
+
+---
+
+### Bug Reports
+
+No confirmed reproducible defects were identified during the testing performed.
+
+Only confirmed defects would be documented as bug reports.
+
+[View Bug Reports](Bug-Reports/README.md)
+
+---
+
+# Screenshots
+
+Screenshots were captured as evidence for selected test scenarios.
+
+Examples include:
+
+- Successful login
+- Invalid login
+- Cart functionality
+- Phone validation
+- Checkout calculation
+- Successful order
+
+Screenshots are available in the `Screenshots/` folder.
+
+---
+
+# Project Structure
 
 ```text
-OmniPizza-Manual-Testing/
+food-delivery-manual-testing/
 │
 ├── README.md
 │
@@ -99,85 +272,66 @@ OmniPizza-Manual-Testing/
 ├── Test-Cases/
 │   └── Test-Cases.md
 │
+├── Test-Data/
+│   └── Test-Data.md
+│
+├── Requirements-Traceability/
+│   └── RTM.md
+│
+├── Exploratory-Testing/
+│   └── Exploratory-Testing.md
+│
 ├── Bug-Reports/
 │   └── README.md
 │
 └── Screenshots/
 ```
----
-
-## 📝 Test Documentation
-Test Plan
-
-The test plan contains:
-
-- Testing objectives
-- Testing scope
-- Test environment
-- Testing types
-- Test scenarios
-- Entry and exit criteria
-- Test execution summary
-- Test Cases
 
 ---
 
-## 20 manual test cases were designed and executed covering:
+# Key QA Skills Demonstrated
 
-- Authentication
-- Cart functionality
-- Checkout
-- Payment flow
-- Validation
-- Price calculations
-- Order confirmation
+This project demonstrates practical experience with:
 
----
-
-## Bug Reports
-
-No confirmed defects were identified during this test execution.
-
-Only reproducible and confirmed defects were considered for reporting.
-
----
-
-## 📸 Test Evidence
-
-Screenshots of selected test executions are stored in the Screenshots folder.
-
-Selected screenshots demonstrate important testing scenarios such as:
-
-- Successful login
-- Cart functionality
-- Validation messages
-- Checkout calculations
-- Successful order placement
-
-No sensitive credentials or personal payment information should be included in screenshots.
+- Manual test case creation
+- Test planning
+- Functional testing
+- Positive and negative testing
+- Form validation
+- Boundary testing
+- End-to-end testing
+- Exploratory testing
+- Requirements traceability
+- Test data preparation
+- Defect identification
+- Defect reporting principles
+- Test execution
+- Evidence collection
+- Regression checks
+- Browser-based testing
 
 ---
 
-## ✅ Conclusion
+# Testing Approach
 
-The OmniPizza application was manually tested across the selected authentication, cart, checkout and ordering workflows.
+Testing was performed using a combination of predefined test cases and exploratory testing.
 
-All 20 executed test cases passed successfully.
+The testing approach focused on verifying expected behavior while also checking common user actions that could produce unexpected results.
 
-This project demonstrates practical experience in:
+Observed behavior was not reported as a defect unless it was reproducible and could be confirmed as a violation of the expected requirements.
 
-- Creating test cases
-- Executing test scenarios
-- Performing negative testing
-- Validating application behavior
-- Recording test results
-- Preparing QA documentation
-- Maintaining a structured testing project
+This helped avoid false-positive bug reports.
 
 ---
 
-## 🔗 Application
+# Conclusion
 
-OmniPizza was used as the test application for this project.
+The OmniPizza food ordering application was tested across its core user journey, including authentication, product selection, cart management, checkout, payment simulation, calculations, and order completion.
 
-This project was created for educational and portfolio purposes.
+Additional exploratory testing was performed to verify browser navigation, refresh behavior, and multi-tab usage.
+
+### Final Result
+
+**23 tests executed → 23 passed → 0 failed → 0 confirmed bugs**
+
+The project demonstrates a structured manual QA workflow from **test planning → test case design → execution → exploratory testing → evidence collection → reporting → final test summary**.
