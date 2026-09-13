@@ -104,52 +104,61 @@ OmniPizza-Manual-Testing/
 │
 └── Screenshots/
 
+---
 
-📝 Test Documentation
+## 📝 Test Documentation
 Test Plan
 
 The test plan contains:
 
-Testing objectives
-Testing scope
-Test environment
-Testing types
-Test scenarios
-Entry and exit criteria
-Test execution summary
-Test Cases
+- Testing objectives
+- Testing scope
+- Test environment
+- Testing types
+- Test scenarios
+- Entry and exit criteria
+- Test execution summary
+- Test Cases
 
-20 manual test cases were designed and executed covering:
+---
 
-Authentication
-Cart functionality
-Checkout
-Payment flow
-Validation
-Price calculations
-Order confirmation
+## 20 manual test cases were designed and executed covering:
 
-Bug Reports
+- Authentication
+- Cart functionality
+- Checkout
+- Payment flow
+- Validation
+- Price calculations
+- Order confirmation
+
+---
+
+## Bug Reports
 
 No confirmed defects were identified during this test execution.
 
 Only reproducible and confirmed defects were considered for reporting.
 
-📸 Test Evidence
+---
+
+## 📸 Test Evidence
 
 Screenshots of selected test executions are stored in the Screenshots folder.
 
 Selected screenshots demonstrate important testing scenarios such as:
 
-Successful login
-Cart functionality
-Validation messages
-Checkout calculations
-Successful order placement
+- Successful login
+- Cart functionality
+- Validation messages
+- Checkout calculations
+- Successful order placement
 
 No sensitive credentials or personal payment information should be included in screenshots.
 
-✅ Conclusion
+---
+
+## ✅ Conclusion
 
 The OmniPizza application was manually tested across the selected authentication, cart, checkout and ordering workflows.
 
@@ -157,14 +166,17 @@ All 20 executed test cases passed successfully.
 
 This project demonstrates practical experience in:
 
-Creating test cases
-Executing test scenarios
-Performing negative testing
-Validating application behavior
-Recording test results
-Preparing QA documentation
-Maintaining a structured testing project
-🔗 Application
+- Creating test cases
+- Executing test scenarios
+- Performing negative testing
+- Validating application behavior
+- Recording test results
+- Preparing QA documentation
+- Maintaining a structured testing project
+
+---
+
+## 🔗 Application
 
 OmniPizza was used as the test application for this project.
 
