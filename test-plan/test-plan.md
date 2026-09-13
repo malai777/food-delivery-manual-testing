@@ -1,180 +1,211 @@
-# OmniPizza Manual Testing - Test Plan
+# OmniPizza Food Delivery — Test Plan
 
-## 1. Project Overview
+## 1. Introduction
 
-OmniPizza is a web-based food ordering application used as a testing sandbox.
+This document defines the testing approach for the OmniPizza food delivery web application.
 
-The purpose of this project is to perform manual functional testing of the application's login, pizza selection, cart, checkout, payment and order confirmation functionality.
-
----
-
-## 2. Testing Objective
-
-The main objectives of testing are:
-
-- Verify that users can log in successfully.
-- Verify that invalid login information is handled correctly.
-- Verify that pizzas can be added and removed from the cart.
-- Verify that cart quantities and prices are updated correctly.
-- Verify checkout field validation.
-- Verify ZIP code and phone number validation.
-- Verify the PayPal demo checkout flow.
-- Verify tax, delivery fee, tip and total calculations.
-- Verify successful order placement.
-- Verify that the cart is cleared after a successful order.
+The objective is to verify the application's core functionality, identify unexpected behavior, and validate important API workflows.
 
 ---
 
-## 3. Scope of Testing
+## 2. Objectives
+
+The main testing objectives are:
+
+* Verify user authentication
+* Verify pizza browsing and selection
+* Verify cart functionality
+* Verify checkout functionality
+* Verify order creation and order management
+* Validate negative scenarios
+* Perform exploratory testing
+* Validate backend API behavior
+* Test intentionally problematic user accounts
+* Document test results and observations
+
+---
+
+## 3. Scope
 
 ### In Scope
 
-The following features were tested:
-
-- User Login
-- Invalid Login Scenarios
-- Pizza Selection
-- Shopping Cart
-- Quantity Management
-- Cart Removal
-- Checkout Form
-- Phone Number Validation
-- ZIP Code Validation
-- PayPal Demo Payment Flow
-- Price Calculation
-- Tip Calculation
-- Order Placement
-- Order Confirmation
-- Cart Clearing
+* Login
+* Authentication validation
+* Pizza listing
+* Pizza selection
+* Cart management
+* Quantity updates
+* Cart item deletion
+* Checkout
+* Customer information
+* Order creation
+* Order retrieval
+* Order cancellation
+* API authentication
+* API request/response validation
+* Negative API testing
+* Problem-user testing
+* Exploratory testing
 
 ### Out of Scope
 
-The following areas were not covered in this test cycle:
-
-- Backend/API testing
-- Database testing
-- Performance testing
-- Security penetration testing
-- Mobile application testing
-- Accessibility testing
-- Real payment processing
+* Production deployment testing
+* Performance/load testing
+* Full security penetration testing
+* Database-level validation
+* Formal UAT
+* Jira defect lifecycle management
 
 ---
 
-## 4. Test Type
+## 4. Testing Types
 
-The following manual testing techniques were used:
+The following testing types were performed:
 
-- Functional Testing
-- Negative Testing
-- Boundary Testing
-- Validation Testing
-- End-to-End Testing
-- Exploratory Testing
+### Functional Testing
+
+Used to verify that the main application features work according to expected behavior.
+
+### Negative Testing
+
+Used to verify application behavior when invalid credentials, invalid inputs, or invalid requests are provided.
+
+### Exploratory Testing
+
+Used to investigate application behavior outside predefined test cases.
+
+### API Testing
+
+Used to validate backend endpoints, status codes, response data, authentication, cart operations, checkout, and order workflows.
+
+### Problem-User Testing
+
+Used to test OmniPizza's intentionally problematic user accounts and document their behavior.
 
 ---
 
 ## 5. Test Environment
 
-| Item | Details |
-|---|---|
-| Application | OmniPizza |
-| Application Type | Web Application |
-| Testing Type | Manual Testing |
-| Browser | Google Chrome |
-| Platform | Web |
-| Payment Method | PayPal Demo |
-| Test Data | Application-provided test data |
+**Application:** OmniPizza Food Delivery
+
+**Browser:** Web browser
+
+**API Testing Tool:** Postman
+
+**API Documentation:** Swagger / OpenAPI
+
+**Version Control:** Git / GitHub
 
 ---
 
-## 6. Test Scenarios
+## 6. Test Data
 
-### Authentication
+The following test accounts were used:
 
-- Verify login with valid credentials.
-- Verify login with invalid username.
-- Verify login with invalid password.
-- Verify login with empty username.
-- Verify login with empty password.
+| Username                  | Purpose                         |
+| ------------------------- | ------------------------------- |
+| `standard_user`           | Normal application flow         |
+| `locked_out_user`         | Locked account testing          |
+| `problem_user`            | Problematic UI/pricing behavior |
+| `performance_glitch_user` | Performance behavior            |
+| `error_user`              | Checkout error behavior         |
+| `a11y_glitch_user`        | Accessibility behavior          |
+| `security_glitch_user`    | Security-related behavior       |
 
-### Shopping Cart
+Password for the provided test accounts:
 
-- Verify adding a pizza to the cart.
-- Verify increasing pizza quantity.
-- Verify decreasing pizza quantity.
-- Verify removing a pizza from the cart.
-- Verify cart price updates.
-
-### Checkout
-
-- Verify required checkout fields.
-- Verify invalid phone number validation.
-- Verify ZIP code validation.
-- Verify PayPal demo checkout.
-- Verify successful order placement.
-- Verify order confirmation.
-- Verify cart clearing after order.
-
-### Price Calculation
-
-- Verify subtotal calculation.
-- Verify delivery fee.
-- Verify tax calculation.
-- Verify tip calculation.
-- Verify final total.
-- Verify total updates when quantity changes.
-- Verify total updates when tip changes.
+`pizza123`
 
 ---
 
 ## 7. Entry Criteria
 
-Testing can begin when:
+Testing could begin when:
 
-- The application is accessible.
-- Test users are available.
-- The required test environment is ready.
-- The application features under test are functional.
+* The application was accessible
+* Test accounts were available
+* Required test data was prepared
+* API endpoints were accessible
+* Postman was available for API testing
 
 ---
 
 ## 8. Exit Criteria
 
-Testing can be completed when:
+Testing was considered complete when:
 
-- Planned test cases have been executed.
-- Test results have been recorded.
-- Failed test cases, if any, have been investigated.
-- Confirmed defects have been documented.
-- Test results have been summarized.
+* Planned manual test cases were executed
+* Exploratory scenarios were completed
+* API test cases were executed
+* Problem-user scenarios were tested
+* Results were documented
+* Screenshots/evidence were collected where applicable
 
 ---
 
 ## 9. Test Execution Summary
 
-| Metric | Result |
-|---|---:|
-| Total Test Cases | 20 |
-| Passed | 20 |
-| Failed | 0 |
-| Blocked | 0 |
-| Pass Rate | 100% |
+| Testing Area         | Planned/Executed |     Passed | Failed |
+| -------------------- | ---------------: | ---------: | -----: |
+| Manual Testing       |               20 |         20 |      0 |
+| Exploratory Testing  |                3 |          3 |      0 |
+| API Testing          |               20 |         20 |      0 |
+| Problem-User Testing |      6 scenarios | Documented |      — |
+
+### Standard Test Execution
+
+**43 planned/executed checks**
+
+**43 passed**
+
+**0 failed**
+
+**100% pass rate**
+
+Problem-user testing is documented separately because several of the observed behaviors are intentionally seeded by the application.
 
 ---
 
-## 10. Test Result
+## 10. Defect Handling
 
-All 20 executed test cases passed successfully.
+Unexpected defects identified during testing would be documented with:
 
-No confirmed defects were identified during this test execution.
+* Defect ID
+* Title
+* Environment
+* Preconditions
+* Steps to reproduce
+* Expected result
+* Actual result
+* Severity
+* Priority
+* Evidence
+* Status
 
-The PayPal demo was treated as a simulated payment environment. Validation behavior observed within the PayPal demo was not reported as an OmniPizza application defect.
+Intentionally seeded behavior associated with OmniPizza's special test accounts is documented as a known test scenario rather than automatically classified as an accidental defect.
 
 ---
 
-## 11. Conclusion
+## 11. Deliverables
 
-The tested OmniPizza functionality performed as expected during the manual test execution.
+The project contains:
 
-Login, cart operations, checkout validation, price calculations, PayPal demo flow, order placement and post-order cart behavior were successfully verified.
+* Test Plan
+* Manual Test Cases
+* Test Data
+* Requirements Traceability Matrix
+* Exploratory Testing Documentation
+* Problem-User Testing Documentation
+* API Test Plan
+* API Test Cases
+* API Test Data
+* Screenshots
+* Test Execution Results
+
+---
+
+## 12. Conclusion
+
+The OmniPizza application was tested through manual functional testing, exploratory testing, API testing, negative testing, and problem-user testing.
+
+The standard planned test execution achieved a **100% pass rate**, while the intentionally problematic user accounts were separately investigated and documented.
