@@ -88,6 +88,7 @@ The main objectives of this project were to:
 
 ## 📁 Project Structure
 
+```text
 OmniPizza-Manual-Testing/
 │
 ├── README.md
@@ -102,7 +103,7 @@ OmniPizza-Manual-Testing/
 │   └── README.md
 │
 └── Screenshots/
-
+```
 ---
 
 ## 📝 Test Documentation
